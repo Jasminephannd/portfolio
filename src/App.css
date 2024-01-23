@@ -99,6 +99,14 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background: #904eaa
 }
+
+@media (max-width: 767px) {
+  nav.navbar {
+    background: #904eaa;
+    padding: 16px 0;
+  }
+}
+
 nav.navbar a.navbar-brand {
     width: 15%;
 }
