@@ -16,10 +16,10 @@ function App() {
       <div className="App">
         <NavBar />
         <Banner />
-        <Skills />
-        <Projects />
         <Qualifications />
+        <Projects />
         <Experience />
+        <Skills />
         <Contact />
       </div>
     </Router>
