@@ -1,0 +1,15 @@
+{
+  "short_name": "Jasmine Phan",
+  "name": "Jasmine Phan | Data Engineer",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e3a5f",
+  "background_color": "#ffffff"
+}
