@@ -34,7 +34,7 @@ const profile = {
   title: "Data Engineer · AI Legal-Tech",
   location: "Based in Sydney, Australia",
   about:
-    "Motivated Data Engineer with hands-on experience building and maintaining production data pipelines using Python, SQL, Neo4j and AWS, currently working at an AI legal-tech startup. I hold a Master of Data Science and specialise in transforming messy, real-world data into structured, ML-ready datasets that power analytics and machine learning.",
+    "Motivated Data Engineer with hands-on experience building and maintaining data pipelines using Python, SQL, Neo4j, and AWS. Holds a Master of Data Science and has practical experience transforming messy, real-world data into structured, ML-ready datasets, supporting analytics and machine learning workflows. Seeking a Data Engineer role where I can design scalable, reliable data systems, collaborate closely with domain experts, and contribute to data platforms that power decision-making.",
   linkedin: "https://www.linkedin.com/in/jasminephannd/",
   github: "https://github.com/Jasminephannd",
   email: "jasminephannd@gmail.com",
@@ -42,7 +42,7 @@ const profile = {
 };
 
 const skills = {
-  "Programming & Querying": ["Python", "SQL"],
+  "Programming & Querying": ["Python", "SQL", "R"],
   "Data Engineering & Databases": [
     "ETL Pipelines",
     "Data Ingestion",
@@ -94,102 +94,106 @@ const projects = [
 
 const experience = [
   {
-    org: "JurisTechne (Legal AI & Technology Startup), Sydney NSW",
-    url: "https://juristechne.com/",
-    logo: juristechneLogo,
-    roles: [
+    category: "Professional Experience",
+    items: [
       {
-        role: "Data Engineer",
-        period: "Apr 2025 – Present",
+        org: "JurisTechne (Legal Tech Startup), Sydney NSW",
+        url: "https://juristechne.com/",
+        logo: juristechneLogo,
+        roles: [
+          { role: "Data Engineer", period: "Apr 2025 – Jul 2026" },
+          { role: "Data Engineer Intern", period: "Jan 2025 – Mar 2025" },
+        ],
         bullets: [
           "Built and maintained Python-based ETL pipelines processing 300,000+ legal documents into analytics-ready and ML-ready datasets.",
-          "Identified and resolved 40,000+ data quality and metadata inconsistencies, improving dataset reliability and downstream accuracy.",
-          "Automated document ingestion, parsing and transformation for legislation, case law and regulatory content across multiple Australian jurisdictions.",
-          "Developed graph database ingestion workflows in Neo4j and supported vector database integrations for AI-powered semantic search.",
-          "Collaborated with AI researchers and legal domain experts to align data models, ontologies and business requirements.",
+          "Identified and resolved 40,000+ data quality and metadata inconsistencies, improving dataset reliability and downstream processing accuracy.",
+          "Automated document ingestion, parsing, and transformation workflows for legislation, case law, and regulatory content across multiple Australian jurisdictions.",
+          "Enhanced legal data schemas to support accurate extraction and representation of penalties, definitions, legal entities, and hierarchical document structures.",
+          "Developed graph database ingestion workflows using Neo4j and supported vector database integrations for AI-powered semantic search applications.",
+          "Developed and maintained data processing workflows using Python, Neo4j, and AWS, supporting scalable storage, transformation, and retrieval of legal datasets.",
+          "Collaborated with AI researchers and legal domain experts to align data models, ontologies, and business requirements.",
         ],
-        tags: ["Python", "SQL", "Neo4j", "AWS", "ETL Pipelines", "Data Ingestion", "Data Transformation", "Data Quality Checks", "MongoDB", "DynamoDB", "MySQL", "SQL Server", "Git"],
+        tags: ["Python", "SQL", "Neo4j", "AWS", "ETL Pipelines", "Data Ingestion", "Data Transformation", "Data Quality Checks", "MySQL", "Bitbucket"],
+      },
+    ],
+  },
+  {
+    category: "Additional Experience",
+    items: [
+      {
+        period: "Feb 2026 – Present",
+        role: "Casual Academic Tutor",
+        org: "University of Technology Sydney – Understanding Data and Statistical Design (Postgraduate)",
+        url: "https://www.uts.edu.au/",
+        logo: utsLogo,
+        bullets: [
+          "Facilitate postgraduate data analysis and statistics workshops using R.",
+          "Support students in statistical modelling, data interpretation and coding.",
+          "Assess assignments and provide structured academic feedback.",
+        ],
+        tags: ["R", "Statistics", "Data Analysis", "Teaching"],
       },
       {
-        role: "Data Engineer Intern",
-        period: "Jan 2025 – Mar 2025",
+        period: "Feb 2022 – Jan 2023",
+        role: "Research Assistant",
+        org: "FinTech & Cybersecurity Research",
+        logo: researchLogo,
         bullets: [
-          "Designed and implemented data pipelines and ETL workflows using Python and SQL.",
-          "Integrated new data sources into a Neo4j graph database, supporting structured querying and relationship modelling.",
-          "Performed data cleansing, transformation and validation to improve data integrity across systems.",
-          "Supported ML and NLP experimentation by preparing structured training datasets.",
+          "Assisted with research-related work in FinTech and Cybersecurity domains using Confluence.",
+          "Managed copyright clearance processes and summarised academic research articles.",
         ],
-        tags: ["Python", "SQL", "Neo4j", "AWS", "ETL Pipelines", "Data Ingestion", "Data Transformation", "Data Quality Checks", "Git"],
+        tags: ["Research", "FinTech", "Cybersecurity", "Confluence"],
       },
     ],
   },
   {
-    period: "Feb 2026 – Present",
-    role: "Casual Academic Tutor",
-    org: "University of Technology Sydney – Understanding Data and Statistical Design (Postgraduate)",
-    url: "https://www.uts.edu.au/",
-    logo: utsLogo,
-    bullets: [
-      "Facilitate postgraduate data analysis and statistics workshops using R.",
-      "Support students in statistical modelling, data interpretation and coding.",
-      "Assess assignments and provide structured academic feedback.",
+    category: "Internships & Industry Projects",
+    items: [
+      {
+        period: "Nov 2023 – Dec 2023",
+        role: "Industry Project – StudyNSW JobsConnect",
+        org: "Practera, Sydney NSW",
+        url: "https://practera.com/",
+        logo: studynswLogo,
+        cert: studynswCert,
+        programLink: "https://practera.com/saiep/",
+        bullets: [
+          "Consulted for an online platform connecting customers with beauty and wellness centres.",
+          "Conducted market research and competitive analysis to support business expansion strategy.",
+          "Developed investor outreach plan and stakeholder engagement strategy.",
+        ],
+        tags: ["Market Research", "Business Analysis", "Strategy", "Excel"],
+      },
+      {
+        period: "Jul 2023",
+        role: "NSW Government Virtual Internship Program Participant",
+        org: "NSW Government",
+        url: "https://www.nsw.gov.au/",
+        logo: nswgovLogo,
+        cert: nswgovCert,
+        programLink: "https://www.psc.nsw.gov.au/virtual-internship-program",
+        bullets: [
+          "Analysed part-time employment trends in the NSW public sector using SAP Lumira.",
+          "Examined male and female representation and sector-wise distribution across a four-year period.",
+          "Produced data-driven insights to support workforce planning and policy decisions.",
+        ],
+        tags: ["Data Analysis", "SAP Lumira", "Excel", "Government"],
+      },
+      {
+        period: "Jun 2020 – Aug 2020",
+        role: "Woolworths Industry Interface Project",
+        org: "SP Jain School of Global Management (Industry Collaboration)",
+        url: "https://www.spjain.org/",
+        logo: woolworthsLogo,
+        credentialLink: woolworthsCert,
+        bullets: [
+          "Analysed Woolworths' call recording system and proposed improved form formats using script editor.",
+          "Performed SPSS quantitative analysis including frequency and crosstab analyses on clean data.",
+          "Identified challenges in forms and personnel practices at Woolworths Supply Chain and provided improvement recommendations.",
+        ],
+        tags: ["SPSS", "Data Analysis", "Data Transformation", "Supply Chain", "Excel"],
+      },
     ],
-    tags: ["R", "Statistics", "Data Analysis", "Teaching"],
-  },
-  {
-    period: "Nov 2023 – Dec 2023",
-    role: "Industry Project – StudyNSW JobsConnect",
-    org: "Practera, Sydney NSW",
-    url: "https://practera.com/",
-    logo: studynswLogo,
-    cert: studynswCert,
-    programLink: "https://practera.com/saiep/",
-    bullets: [
-      "Consulted for an online platform connecting customers with beauty and wellness centres.",
-      "Conducted market research and competitive analysis to support business expansion strategy.",
-      "Developed investor outreach plan and stakeholder engagement strategy.",
-    ],
-    tags: ["Market Research", "Business Analysis", "Strategy", "Excel"],
-  },
-  {
-    period: "Jul 2023",
-    role: "NSW Government Virtual Internship Program Participant",
-    org: "NSW Government",
-    url: "https://www.nsw.gov.au/",
-    logo: nswgovLogo,
-    cert: nswgovCert,
-    programLink: "https://www.psc.nsw.gov.au/virtual-internship-program",
-    bullets: [
-      "Analysed part-time employment trends in the NSW public sector using SAP Lumira.",
-      "Examined male and female representation and sector-wise distribution across a four-year period.",
-      "Produced data-driven insights to support workforce planning and policy decisions.",
-    ],
-    tags: ["Data Analysis", "SAP Lumira", "Excel", "Government"],
-  },
-  {
-    period: "Feb 2022 – Jan 2023",
-    role: "Research Assistant",
-    org: "FinTech & Cybersecurity Research",
-    logo: researchLogo,
-    bullets: [
-      "Assisted with research-related work in FinTech and Cybersecurity domains using Confluence.",
-      "Managed copyright clearance processes and summarised academic research articles.",
-    ],
-    tags: ["Research", "FinTech", "Cybersecurity", "Confluence"],
-  },
-  {
-    period: "Jun 2020 – Aug 2020",
-    role: "Woolworths Industry Interface Project",
-    org: "SP Jain School of Global Management (Industry Collaboration)",
-    url: "https://www.spjain.org/",
-    logo: woolworthsLogo,
-    credentialLink: woolworthsCert,
-    bullets: [
-      "Analysed Woolworths' call recording system and proposed improved form formats using script editor.",
-      "Performed SPSS quantitative analysis including frequency and crosstab analyses on clean data.",
-      "Identified challenges in forms and personnel practices at Woolworths Supply Chain and provided improvement recommendations.",
-    ],
-    tags: ["SPSS", "Data Analysis", "Data Transformation", "Supply Chain", "Excel"],
   },
 ];
 
@@ -554,8 +558,13 @@ function MainColumn() {
           <SectionLabel>Experience</SectionLabel>
         </div>
         <div className="mt-3 bg-white shadow-lg shadow-gray-100 border border-gray-200 rounded-2xl sm:p-6 p-4">
-          {experience.map((job, i) => (
-            <div key={i} className={i < experience.length - 1 ? "mb-6" : ""}>
+          {experience.map((group) => (
+            <div key={group.category} className="mb-8 last:mb-0">
+              <p className="text-xs text-gray-400 font-mono uppercase tracking-wide mb-3">
+                {group.category}
+              </p>
+              {group.items.map((job, i) => (
+            <div key={i} className={i < group.items.length - 1 ? "mb-6" : ""}>
               {job.roles ? (
                 <>
                   <div className="flex items-center gap-3">
@@ -564,17 +573,18 @@ function MainColumn() {
                       <OrgName name={job.org} url={job.url} />
                     </p>
                   </div>
-                  <div className="mt-3 space-y-4">
+                  <div className="mt-3 space-y-2">
                     {job.roles.map((r, ri) => (
                       <div key={ri}>
                         <p className="text-md text-gray-900 font-semibold leading-snug">
                           {r.role}
                         </p>
                         <p className="text-sm text-gray-600">{r.period}</p>
-                        <RoleDetails bullets={r.bullets} tags={r.tags} />
+                        {r.bullets && <RoleDetails bullets={r.bullets} tags={r.tags} />}
                       </div>
                     ))}
                   </div>
+                  {job.bullets && <RoleDetails bullets={job.bullets} tags={job.tags} />}
                 </>
               ) : (
                 <>
@@ -623,6 +633,8 @@ function MainColumn() {
                   )}
                 </>
               )}
+            </div>
+              ))}
             </div>
           ))}
         </div>
