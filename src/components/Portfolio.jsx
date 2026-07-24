@@ -31,7 +31,7 @@ import destinationNswLogo from "../assets/img/volunteer/destination-nsw-logo.jpg
 
 const profile = {
   name: "Jasmine Phan",
-  title: "Data Engineer · AI Legal-Tech",
+  title: "Data Engineer",
   location: "Based in Sydney, Australia",
   about:
     "Motivated Data Engineer with hands-on experience building and maintaining data pipelines using Python, SQL, Neo4j, and AWS. Holds a Master of Data Science and has practical experience transforming messy, real-world data into structured, ML-ready datasets, supporting analytics and machine learning workflows. Seeking a Data Engineer role where I can design scalable, reliable data systems, collaborate closely with domain experts, and contribute to data platforms that power decision-making.",
