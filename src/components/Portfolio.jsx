@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import avatar from "../assets/img/avatar.png";
 import resumePdf from "../assets/img/jasminephan-resume.pdf";
+import nemEnergyImg from "../assets/img/projects/nem-energy-pipeline.png";
 import hackernewsImg from "../assets/img/projects/hackernews-data-engineering.png";
 import salesDashboardImg from "../assets/img/projects/sales-dashboard.png";
 import juristechneLogo from "../assets/img/experience/juristechne-logo.png";
@@ -72,6 +73,16 @@ const hobbies = {
 
 /* PROJECTS — newest first. Add more entries below as needed. */
 const projects = [
+  {
+    title: "NEM Energy Pipeline (Azure · Power BI)",
+    description:
+      "End-to-end Azure pipeline for Australia's National Electricity Market (AEMO). A Python C/I/D/F parser lands 5-minute dispatch data into a bronze/silver/gold lakehouse, a metadata-driven Azure Data Factory pipeline loads a SQL star schema, and Power BI surfaces pricing, renewable-share and data-quality insights.",
+    image: nemEnergyImg,
+    tags: ["Azure", "Azure Data Factory", "Azure SQL", "Python", "T-SQL", "Power BI", "Bicep", "Data Quality", "Star Schema"],
+    href: "https://github.com/Jasminephannd/nem-energy-pipeline",
+    report: "https://clear-jasmine-526.notion.site/NEM-Energy-Pipeline-Report-3aa5663db26b81d190b6d4eccecdcf18",
+    date: "Jul 2026",
+  },
   {
     title: "Hacker News Data Engineering Pipeline",
     description:
@@ -493,31 +504,45 @@ function Sidebar() {
   );
 }
 
-function ProjectCard({ project }) {
+function CardLink({ href, children }) {
   return (
     <a
-      href={project.href}
+      href={href}
       target="_blank"
       rel="noreferrer"
-      className="group block bg-white shadow-lg shadow-gray-100 border border-gray-200 rounded-2xl transform transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
+      className="inline-flex items-center text-sm text-navy hover:underline underline-offset-4"
     >
-      {project.image ? (
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-auto rounded-t-2xl"
-        />
-      ) : (
-        <div className="w-full h-36 rounded-t-2xl bg-gradient-to-br from-navy to-[#33597f] flex items-center justify-center">
-          <svg className="w-10 h-10 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
-          </svg>
-        </div>
-      )}
-      <div className="sm:px-4 px-3 sm:pb-4 pb-3">
-        <p className="text-md text-gray-900 mb-1 mt-3 font-semibold group-hover:underline group-hover:underline-offset-4">
+      {children}
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3 ml-1">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+      </svg>
+    </a>
+  );
+}
+
+function ProjectCard({ project }) {
+  return (
+    <div className="group flex flex-col bg-white shadow-lg shadow-gray-100 border border-gray-200 rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
+      <a href={project.href} target="_blank" rel="noreferrer" className="block">
+        {project.image ? (
+          <img src={project.image} alt={project.title} className="w-full h-auto" />
+        ) : (
+          <div className="w-full h-36 bg-gradient-to-br from-navy to-[#33597f] flex items-center justify-center">
+            <svg className="w-10 h-10 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+            </svg>
+          </div>
+        )}
+      </a>
+      <div className="sm:px-4 px-3 sm:pb-4 pb-3 flex flex-col flex-1">
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noreferrer"
+          className="text-md text-gray-900 mb-1 mt-3 font-semibold group-hover:underline group-hover:underline-offset-4"
+        >
           {project.title}
-        </p>
+        </a>
         {project.tags && project.tags.length > 0 && (
           <div className="mt-2">
             {project.tags.map((t) => (
@@ -526,14 +551,12 @@ function ProjectCard({ project }) {
           </div>
         )}
         <p className="text-sm text-gray-600 mb-1 mt-2">{project.description}</p>
-        <div className="flex items-center mt-2 text-sm text-navy">
-          View on GitHub
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3 ml-1">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-          </svg>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2">
+          <CardLink href={project.href}>View on GitHub</CardLink>
+          {project.report && <CardLink href={project.report}>Read the report</CardLink>}
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 
